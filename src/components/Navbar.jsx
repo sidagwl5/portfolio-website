@@ -25,8 +25,38 @@ const Navbar = () => {
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-center pointer-events-none">
-            <nav className="pointer-events-auto">
-                <div className="nav-pill flex items-center gap-1 bg-white/70 dark:bg-zinc-900/80 border border-slate-200/50 dark:border-zinc-800/50 rounded-full px-2 py-1.5 shadow-sm">
+            {/* Liquid Glass Effect - Commented out per user request
+            <svg style={{ position: 'fixed', width: 0, height: 0, pointerEvents: 'none' }} aria-hidden="true">
+                <filter id="liquid-refraction-v5" x="-20%" y="-20%" width="140%" height="140%">
+                    <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0.008 0.008"
+                        numOctaves="2"
+                        seed="92"
+                        result="noise"
+                    />
+                    <feGaussianBlur in="noise" stdDeviation="0.5" result="blur" />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2="blur"
+                        scale="60"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                    />
+                </filter>
+            </svg>
+            <div
+                className="absolute inset-x-0 top-0 h-20 pointer-events-none transition-opacity duration-700"
+                style={{
+                    backdropFilter: 'blur(0px)',
+                    WebkitBackdropFilter: 'blur(0px)',
+                    filter: 'url(#liquid-refraction-v5)',
+                    opacity: 1
+                }}
+            />
+            */}
+            <nav className="pointer-events-auto relative z-10">
+                <div className="nav-pill flex items-center gap-1 bg-white/30 dark:bg-zinc-900/30 border border-slate-200/50 dark:border-zinc-800/50 rounded-full px-2 py-1.5 shadow-sm backdrop-blur-md">
                     <a className="p-2 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors flex items-center justify-center text-slate-600 dark:text-slate-300" href="#">
                         <Home size={18} />
                     </a>

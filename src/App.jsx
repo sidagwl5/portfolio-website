@@ -1,4 +1,5 @@
 import React from 'react';
+// Force refresh after LiquidGlass removal
 import ContactFooter from './components/ContactFooter';
 import Experience from './components/Experience';
 import Hero from './components/Hero';

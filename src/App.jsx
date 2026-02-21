@@ -1,32 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import Hero from './components/Hero';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
+import React from 'react';
 import ContactFooter from './components/ContactFooter';
+import Experience from './components/Experience';
+import Hero from './components/Hero';
 import Navbar from './components/Navbar';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
 import useSmoothScroll from './hooks/useSmoothScroll';
 
 function App() {
-    const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString('en-GB', { hour12: false }));
+
 
     // Initialize smooth scroll
     useSmoothScroll();
 
-    useEffect(() => {
-        // Update time
-        const timer = setInterval(() => {
-            setCurrentTime(new Date().toLocaleTimeString('en-GB', { hour12: false }));
-        }, 1000);
 
-        return () => {
-            clearInterval(timer);
-        };
-    }, []);
 
     return (
         <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
-            <Navbar currentTime={currentTime} />
+            <Navbar />
 
             <Hero />
 

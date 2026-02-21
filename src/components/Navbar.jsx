@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Home, User, Briefcase, Image as ImageIcon, Mail, Sun, Moon } from 'lucide-react';
 
-const Navbar = ({ currentTime }) => {
+const Navbar = () => {
     const [isDark, setIsDark] = useState(true);
 
     useEffect(() => {
@@ -24,10 +24,7 @@ const Navbar = ({ currentTime }) => {
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between pointer-events-none">
-            <div className="hidden md:block pointer-events-auto">
-                <span className="text-[10px] tracking-widest uppercase font-medium text-slate-400 dark:text-slate-500">IND/IST</span>
-            </div>
+        <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-center pointer-events-none">
             <nav className="pointer-events-auto">
                 <div className="nav-pill flex items-center gap-1 bg-white/70 dark:bg-zinc-900/80 border border-slate-200/50 dark:border-zinc-800/50 rounded-full px-2 py-1.5 shadow-sm">
                     <a className="p-2 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors flex items-center justify-center text-slate-600 dark:text-slate-300" href="#">
@@ -60,11 +57,6 @@ const Navbar = ({ currentTime }) => {
                     </button>
                 </div>
             </nav>
-            <div className="hidden md:block pointer-events-auto">
-                <span className="text-[10px] tracking-widest uppercase font-medium text-slate-400 dark:text-slate-500">
-                    {currentTime}
-                </span>
-            </div>
         </header>
     );
 };

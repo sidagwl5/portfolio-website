@@ -14,8 +14,8 @@ export default {
           blue: "#3b82f6",   // Blue accent from Projects
           sky: "#38bdf8",    // Sky accent from Skills
         },
-        "background-light": "#ffffff",
-        "background-dark": "#030014",
+        "background-light": "#f8fafc", // Subtle off-white (Slate 50)
+        "background-dark": "#020617",  // Slightly richer dark (Slate 950)
         "surface-dark": "#1e293b",
         "card-dark": "#1e293b",
         "card-light": "#ffffff",

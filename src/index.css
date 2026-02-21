@@ -104,3 +104,43 @@ html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* View Transition API Styles */
+::view-transition-group(root) {
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::view-transition-new(root) {
+  animation-name: reveal-light;
+  z-index: 100;
+}
+
+::view-transition-old(root) {
+  animation: none;
+  z-index: -1;
+}
+
+.dark::view-transition-new(root) {
+  animation-name: reveal-dark;
+}
+
+@keyframes reveal-light {
+  from {
+    clip-path: circle(0% at center);
+  }
+
+  to {
+    clip-path: circle(150% at center);
+  }
+}
+
+@keyframes reveal-dark {
+  from {
+    clip-path: circle(0% at center);
+  }
+
+  to {
+    clip-path: circle(150% at center);
+  }
+}

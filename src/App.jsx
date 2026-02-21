@@ -39,9 +39,20 @@ function App() {
         };
     }, [isDark]);
 
+    const toggleTheme = () => {
+        if (!document.startViewTransition) {
+            setIsDark(!isDark);
+            return;
+        }
+
+        document.startViewTransition(() => {
+            setIsDark(!isDark);
+        });
+    };
+
     return (
         <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
-            <Navbar isDark={isDark} setIsDark={setIsDark} currentTime={currentTime} />
+            <Navbar isDark={isDark} setIsDark={toggleTheme} currentTime={currentTime} />
 
             <Hero />
 

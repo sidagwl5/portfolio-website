@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Home, User, Briefcase, Image as ImageIcon, Mail, Sun, Moon } from 'lucide-react';
 
-const Navbar = ({ isDark, setIsDark, currentTime }) => {
+const Navbar = ({ currentTime }) => {
+    const [isDark, setIsDark] = useState(true);
+
+    useEffect(() => {
+        if (isDark) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [isDark]);
+
+    const toggleTheme = () => {
+        if (!document.startViewTransition) {
+            setIsDark(!isDark);
+            return;
+        }
+
+        document.startViewTransition(() => {
+            setIsDark(!isDark);
+        });
+    };
+
     return (
         <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between pointer-events-none">
             <div className="hidden md:block pointer-events-auto">
@@ -31,7 +52,7 @@ const Navbar = ({ isDark, setIsDark, currentTime }) => {
                     </a>
                     <div className="h-4 w-px bg-slate-200 dark:bg-zinc-800 mx-1"></div>
                     <button
-                        onClick={() => setIsDark(!isDark)}
+                        onClick={toggleTheme}
                         className="p-2 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors flex items-center justify-center text-slate-600 dark:text-slate-300"
                         aria-label="Toggle dark mode"
                     >

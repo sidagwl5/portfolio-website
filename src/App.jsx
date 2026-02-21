@@ -1,58 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import Lenis from 'lenis';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import ContactFooter from './components/ContactFooter';
 import Navbar from './components/Navbar';
+import useSmoothScroll from './hooks/useSmoothScroll';
 
 function App() {
-    const [isDark, setIsDark] = useState(true);
     const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString('en-GB', { hour12: false }));
 
+    // Initialize smooth scroll
+    useSmoothScroll();
+
     useEffect(() => {
-        // Initialize Lenis
-        const lenis = new Lenis();
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-
         // Update time
         const timer = setInterval(() => {
             setCurrentTime(new Date().toLocaleTimeString('en-GB', { hour12: false }));
         }, 1000);
 
-        if (isDark) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-
         return () => {
-            lenis.destroy();
             clearInterval(timer);
         };
-    }, [isDark]);
-
-    const toggleTheme = () => {
-        if (!document.startViewTransition) {
-            setIsDark(!isDark);
-            return;
-        }
-
-        document.startViewTransition(() => {
-            setIsDark(!isDark);
-        });
-    };
+    }, []);
 
     return (
         <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
-            <Navbar isDark={isDark} setIsDark={toggleTheme} currentTime={currentTime} />
+            <Navbar currentTime={currentTime} />
 
             <Hero />
 

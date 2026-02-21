@@ -21,9 +21,9 @@ export default {
         "card-light": "#ffffff",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        display: ["Plus Jakarta Sans", "Inter", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        sans: ["Geist", "Inter", "sans-serif"],
+        display: ["Geist", "Plus Jakarta Sans", "Inter", "sans-serif"],
+        mono: ["Geist Mono", "JetBrains Mono", "monospace"],
       },
       borderRadius: {
         DEFAULT: "0.5rem",

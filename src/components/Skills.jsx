@@ -1,29 +1,22 @@
-import React from 'react';
+import { skillsData } from '../data/skillsData';
 
 const Skills = () => {
-    const skills = {
-        Frontend: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Redux Toolkit', 'Framer Motion'],
-        Tools: ['Git & GitHub', 'Webpack', 'Vite', 'Postman', 'Vercel'],
-        Testing: ['Jest', 'Cypress', 'Testing Library', 'Playwright'],
-        DevOps: ['Docker', 'AWS (S3/EC2)', 'CI/CD Pipelines', 'Nginx', 'Firebase']
-    };
-
     return (
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-24" id="skills">
             <header className="mb-12 md:mb-16">
                 <div className="flex items-center gap-2 mb-4">
                     <span className="h-px w-8 bg-primary"></span>
-                    <span className="text-primary font-mono text-sm tracking-widest uppercase font-semibold">Technical Stack</span>
+                    <span className="text-primary font-mono text-sm tracking-widest uppercase font-semibold">{skillsData.header.badge}</span>
                 </div>
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
-                    Skills & <span className="text-primary">Expertise.</span>
+                    {skillsData.header.title.main} <span className="text-primary">{skillsData.header.title.accent}</span>
                 </h1>
                 <p className="text-slate-600 dark:text-slate-400 max-w-2xl text-base md:text-lg leading-relaxed font-medium">
-                    As a React specialist, I focus on building pixel-perfect, accessible, and high-performance web applications using modern industry-standard tools and practices.
+                    {skillsData.header.description}
                 </p>
             </header>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {Object.entries(skills).map(([category, items]) => (
+                {Object.entries(skillsData.categories).map(([category, items]) => (
                     <section key={category} className="space-y-6">
                         <div className="flex items-center gap-3">
                             <span className="material-icons-round text-primary">

@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { experienceData } from '../data/experienceData';
 
 const Experience = () => {
     const containerRef = useRef(null);
@@ -17,43 +18,16 @@ const Experience = () => {
     // Transform spring-dampened progress to a percentage for circle positioning
     const circleY = useTransform(springProgress, [0, 1], ["0%", "100%"]);
 
-    const experiences = [
-        {
-            year: "2024 — PRESENT",
-            role: "Senior Frontend Engineer",
-            company: "Klaviyo",
-            points: [
-                "Leading the architectural shift to a unified design system, improving component reuse by 40% across 12 product squads.",
-                "Championing WCAG 2.1 compliance, reducing accessibility-related support tickets by 60% within the first year.",
-                "Mentoring 4 mid-level developers through regular pair programming and deep-dive technical RFC reviews."
-            ],
-            tags: ["React", "TypeScript", "Accessibility"],
-            current: true
-        },
-        {
-            year: "2018 — 2024",
-            role: "Lead Engineer",
-            company: "Upstatement",
-            points: [
-                "Delivered high-impact digital experiences for clients including Harvard, PBS, and The 19th News.",
-                "Spearheaded the internal migration from REST to GraphQL, reducing frontend data fetching boilerplate by 50%.",
-                "Established engineering best practices for code reviews, testing strategies, and automated CI/CD pipelines."
-            ],
-            tags: ["Next.js", "GraphQL", "Node.js"],
-            current: false
-        }
-    ];
-
     return (
         <section className="pt-20 md:pt-32 pb-20 md:pb-32 px-6" id="experience" ref={containerRef}>
             <div className="max-w-5xl mx-auto">
                 <header className="mb-12 md:mb-20">
-                    <h2 className="text-sm font-mono text-primary mb-4 tracking-widest uppercase">Career Path</h2>
+                    <h2 className="text-sm font-mono text-primary mb-4 tracking-widest uppercase">{experienceData.header.badge}</h2>
                     <h1 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
-                        Professional Experience
+                        {experienceData.header.title}
                     </h1>
                     <p className="max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                        I specialize in building accessible, high-performance web applications using React and the modern frontend ecosystem.
+                        {experienceData.header.description}
                     </p>
                 </header>
 
@@ -77,7 +51,7 @@ const Experience = () => {
                     </div>
 
                     <div className="space-y-12 md:space-y-24">
-                        {experiences.map((exp, idx) => (
+                        {experienceData.experiences.map((exp, idx) => (
                             <div key={idx} className={`relative grid md:grid-cols-2 gap-6 md:gap-16 items-start group`}>
                                 {/* No individual circles anymore */}
                                 <motion.div

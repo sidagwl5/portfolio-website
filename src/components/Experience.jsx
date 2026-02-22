@@ -45,14 +45,14 @@ const Experience = () => {
     ];
 
     return (
-        <section className="pt-32 pb-32 px-6" id="experience" ref={containerRef}>
+        <section className="pt-20 md:pt-32 pb-20 md:pb-32 px-6" id="experience" ref={containerRef}>
             <div className="max-w-5xl mx-auto">
-                <header className="mb-20">
+                <header className="mb-12 md:mb-20">
                     <h2 className="text-sm font-mono text-primary mb-4 tracking-widest uppercase">Career Path</h2>
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+                    <h1 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
                         Professional Experience
                     </h1>
-                    <p className="max-w-2xl text-lg text-slate-600 dark:text-slate-400">
+                    <p className="max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
                         I specialize in building accessible, high-performance web applications using React and the modern frontend ecosystem.
                     </p>
                 </header>
@@ -76,9 +76,9 @@ const Experience = () => {
                         />
                     </div>
 
-                    <div className="space-y-16 md:space-y-24">
+                    <div className="space-y-12 md:space-y-24">
                         {experiences.map((exp, idx) => (
-                            <div key={idx} className={`relative grid md:grid-cols-2 gap-8 md:gap-16 items-start group`}>
+                            <div key={idx} className={`relative grid md:grid-cols-2 gap-6 md:gap-16 items-start group`}>
                                 {/* No individual circles anymore */}
                                 <motion.div
                                     initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
@@ -87,8 +87,8 @@ const Experience = () => {
                                     className={`${idx % 2 === 0 ? 'md:text-right text-left pl-8 md:pl-0' : 'md:order-2 pl-8 md:pl-0'}`}
                                 >
                                     <span className={`text-sm font-mono ${exp.current ? 'text-primary' : 'text-slate-500'} mb-2 block uppercase tracking-wider`}>{exp.year}</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white leading-tight">{exp.role}</h3>
-                                    <p className="text-lg font-medium text-slate-600 dark:text-slate-400 mt-1 mb-4">{exp.company}</p>
+                                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight">{exp.role}</h3>
+                                    <p className="text-base md:text-lg font-medium text-slate-600 dark:text-slate-400 mt-1 mb-4">{exp.company}</p>
                                     <div className={`flex flex-wrap ${idx % 2 === 0 ? 'md:justify-end' : 'justify-start'} gap-2`}>
                                         {exp.tags.map(tag => (
                                             <span key={tag} className="px-3 py-1 text-[0.65rem] font-mono font-bold uppercase tracking-wider rounded-md border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 text-slate-500 dark:text-slate-400">{tag}</span>
@@ -100,7 +100,7 @@ const Experience = () => {
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.5, delay: 0.3 }}
-                                    className={`${idx % 2 === 0 ? '' : 'md:order-1'} bg-white dark:bg-white/[0.02] p-8 rounded-2xl border border-slate-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden`}
+                                    className={`${idx % 2 === 0 ? '' : 'md:order-1'} bg-white dark:bg-white/[0.02] p-6 md:p-8 rounded-2xl border border-slate-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden`}
                                 >
                                     <ul className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">
                                         {exp.points.map((point, pIdx) => (

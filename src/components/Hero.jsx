@@ -4,21 +4,21 @@ import InteractiveBackground from './InteractiveBackground';
 
 const Hero = () => {
     return (
-        <section className="relative text-center mb-20 max-w-5xl mx-auto px-6 pt-32 pb-24 overflow-hidden">
+        <section className="relative text-center mb-10 md:mb-20 max-w-5xl mx-auto px-6 pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
             <div className="hidden lg:block absolute inset-0 z-0">
                 <InteractiveBackground />
             </div>
 
             <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-full px-4 py-1 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both">
+                <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-full px-4 py-1 mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-primary">Portfolio</span>
                     <div className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700"></div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Featured work</span>
                 </div>
-                <h1 className="font-display text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1] animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200 fill-mode-both">
-                    Building bridges between <br /> design and code
+                <h1 className="font-display text-3xl md:text-7xl font-extrabold tracking-tight mb-6 md:mb-8 leading-[1.2] md:leading-[1.1] animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200 fill-mode-both text-slate-900 dark:text-white">
+                    Building bridges between <br className="hidden md:block" /> design and code
                 </h1>
-                <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed mb-10 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
+                <p className="max-w-2xl mx-auto text-base md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed mb-8 md:mb-10 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
                     I'm <span className="text-slate-900 dark:text-white font-medium">Siddharth Agrawal</span>, a senior frontend engineer where I craft intuitive user experiences. After hours, I build my own projects.
                 </p>
 

@@ -3,15 +3,15 @@ import React from 'react';
 const ContactFooter = () => {
     return (
         <div id="contact">
-            <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-                <div className="mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Get In Touch</h2>
+            <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+                <div className="mb-12 md:mb-16">
+                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Get In Touch</h2>
                     <div className="h-1.5 w-20 bg-primary rounded-full"></div>
-                    <p className="mt-6 text-lg max-w-2xl text-slate-600 dark:text-slate-400">
+                    <p className="mt-6 text-base md:text-lg max-w-2xl text-slate-600 dark:text-slate-400 font-medium">
                         I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
                     </p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start">
                     <div className="bg-white dark:bg-slate-800/50 p-8 rounded-2xl border border-slate-200 dark:border-slate-700/50 shadow-xl backdrop-blur-sm">
                         <form action="#" className="space-y-6" method="POST">
                             <div>

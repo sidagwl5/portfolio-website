@@ -61,21 +61,21 @@ const Navbar = () => {
                         <Home size={18} />
                     </a>
                     <div className="h-4 w-px bg-slate-200 dark:bg-zinc-800 mx-1"></div>
-                    <a className="flex items-center gap-2 px-3 py-1.5 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors text-xs font-medium text-slate-600 dark:text-slate-300" href="#skills">
+                    <a className="flex items-center gap-2 px-2 md:px-3 py-1.5 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors text-xs font-medium text-slate-600 dark:text-slate-300" href="#skills">
                         <User size={16} className="text-slate-400" />
-                        About
+                        <span className="hidden md:block">About</span>
                     </a>
-                    <a className="flex items-center gap-2 px-3 py-1.5 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors text-xs font-medium text-slate-600 dark:text-slate-300" href="#experience">
+                    <a className="flex items-center gap-2 px-2 md:px-3 py-1.5 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors text-xs font-medium text-slate-600 dark:text-slate-300" href="#experience">
                         <Briefcase size={16} className="text-slate-400" />
-                        Work
+                        <span className="hidden md:block">Work</span>
                     </a>
-                    <a className="flex items-center gap-2 px-3 py-1.5 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors text-xs font-medium text-slate-600 dark:text-slate-300" href="#projects">
+                    <a className="flex items-center gap-2 px-2 md:px-3 py-1.5 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors text-xs font-medium text-slate-600 dark:text-slate-300" href="#projects">
                         <ImageIcon size={16} className="text-slate-400" />
-                        Gallery
+                        <span className="hidden md:block">Gallery</span>
                     </a>
-                    <a className="flex items-center gap-2 px-3 py-1.5 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors text-xs font-medium text-slate-600 dark:text-slate-300" href="#contact">
+                    <a className="flex items-center gap-2 px-2 md:px-3 py-1.5 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors text-xs font-medium text-slate-600 dark:text-slate-300" href="#contact">
                         <Mail size={16} className="text-slate-400" />
-                        Contact
+                        <span className="hidden md:block">Contact</span>
                     </a>
                     <div className="h-4 w-px bg-slate-200 dark:bg-zinc-800 mx-1"></div>
                     <button

@@ -9,16 +9,16 @@ const Skills = () => {
     };
 
     return (
-        <div className="max-w-6xl mx-auto px-6 py-24" id="skills">
-            <header className="mb-16">
+        <div className="max-w-6xl mx-auto px-6 py-16 md:py-24" id="skills">
+            <header className="mb-12 md:mb-16">
                 <div className="flex items-center gap-2 mb-4">
                     <span className="h-px w-8 bg-primary"></span>
                     <span className="text-primary font-mono text-sm tracking-widest uppercase font-semibold">Technical Stack</span>
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
                     Skills & <span className="text-primary">Expertise.</span>
                 </h1>
-                <p className="text-slate-600 dark:text-slate-400 max-w-2xl text-lg leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-400 max-w-2xl text-base md:text-lg leading-relaxed font-medium">
                     As a React specialist, I focus on building pixel-perfect, accessible, and high-performance web applications using modern industry-standard tools and practices.
                 </p>
             </header>

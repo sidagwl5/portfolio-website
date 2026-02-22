@@ -32,13 +32,13 @@ const Projects = () => {
     ];
 
     return (
-        <div className="max-w-7xl mx-auto px-6 py-20" id="projects">
-            <div className="mb-16">
-                <h2 className="font-display text-sm font-semibold tracking-widest uppercase text-primary-blue mb-3">Portfolio</h2>
-                <h1 className="font-display text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+        <div className="max-w-7xl mx-auto px-6 py-16 md:py-20" id="projects">
+            <div className="mb-12 md:mb-16">
+                <h2 className="font-display text-xs md:text-sm font-semibold tracking-widest uppercase text-primary-blue mb-3">Portfolio</h2>
+                <h1 className="font-display text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white">
                     Featured Projects
                 </h1>
-                <p className="max-w-2xl text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
                     A selection of high-performance web applications built with React, Tailwind, and modern frontend architectures. Focused on accessibility and pixel-perfect execution.
                 </p>
             </div>

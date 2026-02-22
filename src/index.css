@@ -4,7 +4,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-primary: #0d9488;
+    --color-primary: #20c8a9;
     --color-primary-purple: #5e6ad2;
     --color-primary-blue: #3b82f6;
     --color-primary-sky: #38bdf8;
@@ -23,14 +23,14 @@
     --radius-2xl: 1rem;
 
     --animate-ping-slow: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
 
-    @variant dark {
-        --color-primary: #5eead4;
-    }
+@variant dark {
+    --color-primary: #5eead4;
 }
 
 :root {
-    --primary: #0d9488;
+    --primary: #20c8a9;
 }
 
 .dark {

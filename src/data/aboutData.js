@@ -1,16 +1,16 @@
 export const aboutData = {
     title: {
-        prefix: "OLÁ",
-        main: "Conheça o designer"
+        prefix: "INTRACT",
+        main: "Senior Frontend Developer"
     },
-    greeting: "Prazer,",
+    greeting: "Arigato,",
     paragraphs: [
-        "Eu sou Siddharth Agrawal, sou um desenvolvedor frontend independente, apaixonado por criar interfaces intuitivas e experiências memoráveis.",
-        "Meu foco é no desenvolvimento de aplicações web modernas, utilizando as melhores práticas e tecnologias de ponta para entregar resultados excepcionais.",
-        "Construo sites e interfaces que equilibram estética e funcionalidade, sempre com um olhar atento aos detalhes e à usabilidade."
+        "I am a <span class=\"text-slate-900 dark:text-white font-semibold\">Senior Frontend Developer</span> with <span class=\"text-slate-900 dark:text-white font-semibold\">~5 years of experience</span>, primarily thriving in dynamic, early-stage startup environments.",
+        "With a <span class=\"text-slate-900 dark:text-white font-medium\">founding engineer background</span>, I bring a mindset of <span class=\"text-slate-900 dark:text-white font-medium\">strong ownership</span> and <span class=\"text-slate-900 dark:text-white font-medium\">relentless execution</span> to every project. My technical expertise is deeply rooted in building robust, scalable applications using <span class=\"text-slate-900 dark:text-white font-semibold\">ReactJS</span> and <span class=\"text-slate-900 dark:text-white font-semibold\">NextJS</span>.",
+        "Whether architecting centralized auth platforms powering multi-chain wallets or optimizing high-traffic Next.js pipelines, my focus is always on delivering <span class=\"text-slate-900 dark:text-white font-medium\">pixel-perfect</span>, <span class=\"text-slate-900 dark:text-white font-medium\">highly performant</span> user experiences."
     ],
     image: {
-        url: "/assets/about-me.webp",
+        url: "/assets/profile.jpg",
         alt: "Siddharth Agrawal"
     },
     socials: [

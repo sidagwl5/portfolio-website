@@ -80,7 +80,7 @@ const Experience = () => {
                                         {exp.points.map((point, pIdx) => (
                                             <li key={pIdx} className="flex items-start">
                                                 <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 mr-3 shrink-0" />
-                                                <span className="text-sm md:text-base">{point}</span>
+                                                <span className="text-sm md:text-base" dangerouslySetInnerHTML={{ __html: point }} />
                                             </li>
                                         ))}
                                     </ul>

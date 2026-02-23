@@ -44,8 +44,6 @@ export const footerData = {
         { label: "Resume", url: "#" }
     ],
     metadata: {
-        copyright: "© 2024. All rights reserved.",
-        builtWith: "React",
-        tools: ["Figma", "Visual Studio Code", "Next.js", "Tailwind CSS", "Vercel"]
+        copyright: "© 2024. All rights reserved."
     }
 };

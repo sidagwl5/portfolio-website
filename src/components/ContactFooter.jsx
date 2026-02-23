@@ -88,17 +88,6 @@ const ContactFooter = () => {
                             ))}
                         </ul>
                     </nav>
-                    <div className="flex items-center gap-3">
-                        <span className="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 uppercase">Built with</span>
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700">
-                            <span className="text-xs font-bold text-slate-700 dark:text-slate-200">{footerData.metadata.builtWith}</span>
-                        </div>
-                    </div>
-                </div>
-                <div className="max-w-7xl mx-auto mt-12 text-center">
-                    <p className="text-xs text-slate-500 dark:text-slate-600 max-w-lg mx-auto leading-relaxed">
-                        Loosely designed in <span className="text-slate-700 dark:text-slate-400 font-medium">{footerData.metadata.tools[0]}</span> and coded in <span className="text-slate-700 dark:text-slate-400 font-medium">{footerData.metadata.tools[1]}</span>. Built with <span className="text-slate-700 dark:text-slate-400 font-medium">{footerData.metadata.tools[2]}</span> and <span className="text-slate-700 dark:text-slate-400 font-medium">{footerData.metadata.tools[3]}</span>, deployed with <span className="text-slate-700 dark:text-slate-400 font-medium">{footerData.metadata.tools[4]}</span>.
-                    </p>
                 </div>
             </footer>
         </div>

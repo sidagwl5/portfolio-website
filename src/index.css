@@ -204,4 +204,14 @@ html.lenis body {
             background-position: 0% 50%;
         }
     }
+
+    @keyframes move-border {
+        from {
+            offset-distance: 0%;
+        }
+
+        to {
+            offset-distance: 100%;
+        }
+    }
 }

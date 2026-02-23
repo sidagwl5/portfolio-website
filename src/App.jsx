@@ -1,5 +1,4 @@
-import React from 'react';
-// Force refresh after LiquidGlass removal
+import About from './components/About';
 import ContactFooter from './components/ContactFooter';
 import Experience from './components/Experience';
 import Hero from './components/Hero';
@@ -22,6 +21,8 @@ function App() {
             <Navbar />
 
             <Hero />
+
+            <About />
 
             <section className="py-24 bg-slate-50 dark:bg-white/[0.02] border-t border-slate-200 dark:border-white/5">
                 <div className="max-w-7xl mx-auto px-6 text-center">

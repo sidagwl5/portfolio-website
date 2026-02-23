@@ -36,9 +36,21 @@ const Hero = () => {
                 </div>
 
                 <div className="flex items-center justify-center gap-3 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-700 fill-mode-both">
-                    <img alt={heroData.avatar.alt} className="w-8 h-8 rounded-full border border-slate-200 dark:border-slate-800 shadow-sm" src={heroData.avatar.url} />
-                    <span className="text-xs font-medium text-slate-600 dark:text-slate-400">About — {heroData.name}</span>
+                    <a href="#about" className="relative inline-flex overflow-hidden rounded-full p-[1.5px] shadow-sm transition-transform hover:scale-105 active:scale-95 group/badge">
+                        <span
+                            className="absolute w-[80px] h-[80px] bg-[radial-gradient(var(--primary)_40%,transparent_60%)] opacity-80"
+                            style={{
+                                offsetPath: 'rect(0 100% 100% 0 round 9999px)',
+                                animation: 'move-border 6s linear infinite'
+                            }}
+                        />
+                        <div className="relative z-10 flex items-center gap-3 bg-white dark:bg-slate-900 px-4 py-2 rounded-full w-full h-full group-hover/badge:bg-slate-50 dark:group-hover/badge:bg-slate-800 transition-colors">
+                            <img alt={heroData.avatar.alt} className="w-6 h-6 rounded-full border border-slate-200 dark:border-slate-800 shadow-sm" src={heroData.avatar.url} />
+                            <span className="text-xs font-medium text-slate-600 dark:text-slate-400">About — {heroData.name}</span>
+                        </div>
+                    </a>
                 </div>
+
             </div>
         </section>
     );

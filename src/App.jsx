@@ -1,44 +1,48 @@
-import About from './components/About';
-import ContactFooter from './components/ContactFooter';
-import Experience from './components/Experience';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Testimonials from './components/Testimonials';
-import useSmoothScroll from './hooks/useSmoothScroll';
+import About from "./components/About";
+import ContactFooter from "./components/ContactFooter";
+import Experience from "./components/Experience";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Testimonials from "./components/Testimonials";
+import useSmoothScroll from "./hooks/useSmoothScroll";
+
+const SectionDivider = () => (
+  <div className="w-full max-w-[1080px] mx-auto px-4 md:px-6">
+    <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-700 to-transparent opacity-80"></div>
+  </div>
+);
 
 function App() {
+  // Initialize smooth scroll
+  useSmoothScroll();
 
+  return (
+    <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
+      <Navbar />
 
-    // Initialize smooth scroll
-    useSmoothScroll();
+      <Hero />
+      <SectionDivider />
 
+      <About />
+      <SectionDivider />
 
+      <Skills />
+      <SectionDivider />
 
-    return (
-        <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
-            <Navbar />
+      <Experience />
+      <SectionDivider />
 
-            <Hero />
+      <Testimonials />
+      <SectionDivider />
 
-            <About />
+      <Projects />
+      <SectionDivider />
 
-            <section className="py-24 bg-slate-50 dark:bg-white/[0.02] border-t border-slate-200 dark:border-white/5">
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-slate-400 dark:text-slate-500 font-display font-semibold uppercase tracking-[0.3em] text-xs">
-                        Core Expertise Below
-                    </h2>
-                </div>
-            </section>
-
-            <Skills />
-            <Experience />
-            <Testimonials />
-            <Projects />
-            <ContactFooter />
-        </div>
-    );
+      <ContactFooter />
+    </div>
+  );
 }
 
 export default App;

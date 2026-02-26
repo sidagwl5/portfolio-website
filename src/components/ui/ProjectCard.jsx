@@ -1,5 +1,3 @@
-import React from "react";
-
 const ProjectCard = ({ project }) => {
   return (
     <article className="project-card-glow group bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm flex flex-col">

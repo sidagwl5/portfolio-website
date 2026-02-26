@@ -102,10 +102,13 @@ const About = () => {
                     {/* Text Column */}
                     <div className="order-1 md:order-2">
                         <div className="mb-8">
-                            <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-3 block animate-in fade-in slide-in-from-bottom-4 duration-700">
-                                {aboutData.title.prefix}
-                            </span>
-                            <h2 className="text-3xl md:text-5xl font-display font-extrabold text-slate-900 dark:text-white leading-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
+                            <div className="flex items-center gap-2 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                                <span className="h-px w-8 bg-primary"></span>
+                                <span className="text-primary font-mono text-sm tracking-widest uppercase font-semibold">
+                                    {aboutData.title.prefix}
+                                </span>
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
                                 {aboutData.title.main}
                             </h2>
                         </div>

@@ -22,10 +22,13 @@ const Experience = () => {
         <section className="pt-20 md:pt-32 pb-20 md:pb-32" id="experience" ref={containerRef}>
             <div className="max-w-[1080px] mx-auto px-6">
                 <header className="mb-12 md:mb-20">
-                    <h2 className="text-sm font-mono text-primary mb-4 tracking-widest uppercase">{experienceData.header.badge}</h2>
-                    <h1 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                    <div className="flex items-center gap-2 mb-4">
+                        <span className="h-px w-8 bg-primary"></span>
+                        <span className="text-primary font-mono text-sm tracking-widest uppercase font-semibold">{experienceData.header.badge}</span>
+                    </div>
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white leading-tight">
                         {experienceData.header.title}
-                    </h1>
+                    </h2>
                     <p className="max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
                         {experienceData.header.description}
                     </p>

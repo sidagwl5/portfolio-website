@@ -1,6 +1,8 @@
 export const testimonialsData = {
     header: {
-        title: "Words of praise from people I have worked with."
+        badge: "Testimonials",
+        title: "Words of praise",
+        description: "A collection of insights and feedback from colleagues and collaborators I've had the privilege of working with."
     },
     testimonials: [
         {

@@ -1,6 +1,6 @@
 export const projectsData = {
     header: {
-        badge: "Portfolio",
+        badge: "Selected Work",
         title: "Featured Projects",
         description: "A selection of high-performance web applications built with React, Tailwind, and modern frontend architectures. Focused on accessibility and pixel-perfect execution."
     },

@@ -8,9 +8,18 @@ const ContactFooter = () => {
             <section className="py-16 md:py-24">
                 <div className="max-w-[1080px] mx-auto px-6 text-center">
                     <div className="mb-12">
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">{footerData.contact.title}</h2>
+                        <div className="flex items-center justify-center gap-2 mb-4">
+                            <span className="h-px w-8 bg-primary"></span>
+                            <span className="text-primary font-mono text-sm tracking-widest uppercase font-semibold">
+                                {footerData.contact.badge}
+                            </span>
+                            <span className="h-px w-8 bg-primary"></span>
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+                            {footerData.contact.title}
+                        </h2>
 
-                        <p className="mt-6 text-base md:text-lg max-w-2xl mx-auto text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                        <p className="mt-6 text-base md:text-xl max-w-2xl mx-auto text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
                             {footerData.contact.description}
                         </p>
                     </div>

@@ -43,9 +43,19 @@ const Testimonials = () => {
                     viewport={{ once: true }}
                     className="text-center"
                 >
-                    <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white max-w-3xl mx-auto leading-tight">
-                        Words of <span className="text-primary">praise</span> from people I have worked with.
+                    <div className="flex items-center justify-center gap-2 mb-4">
+                        <span className="h-px w-8 bg-primary"></span>
+                        <span className="text-primary font-mono text-sm tracking-widest uppercase font-semibold">
+                            {testimonialsData.header.badge}
+                        </span>
+                        <span className="h-px w-8 bg-primary"></span>
+                    </div>
+                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                        {testimonialsData.header.title}
                     </h2>
+                    <p className="max-w-2xl mx-auto text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+                        {testimonialsData.header.description}
+                    </p>
                 </motion.div>
             </div>
 

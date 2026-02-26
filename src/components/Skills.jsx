@@ -9,9 +9,9 @@ const Skills = () => {
                         <span className="h-px w-8 bg-primary"></span>
                         <span className="text-primary font-mono text-sm tracking-widest uppercase font-semibold">{skillsData.header.badge}</span>
                     </div>
-                    <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
-                        {skillsData.header.title.main} <span className="text-primary">{skillsData.header.title.accent}</span>
-                    </h1>
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
+                        {skillsData.header.title.main} <span>{skillsData.header.title.accent}</span>
+                    </h2>
                     <p className="text-slate-600 dark:text-slate-400 max-w-2xl text-base md:text-lg leading-relaxed font-medium">
                         {skillsData.header.description}
                     </p>

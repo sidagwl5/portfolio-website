@@ -5,10 +5,13 @@ const Projects = () => {
         <section id="projects">
             <div className="max-w-[1080px] mx-auto px-6 py-16 md:py-20">
                 <div className="mb-12 md:mb-16">
-                    <h2 className="font-display text-xs md:text-sm font-semibold tracking-widest uppercase text-primary-blue mb-3">{projectsData.header.badge}</h2>
-                    <h1 className="font-display text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white">
+                    <div className="flex items-center gap-2 mb-4">
+                        <span className="h-px w-8 bg-primary"></span>
+                        <span className="text-primary font-mono text-sm tracking-widest uppercase font-semibold">{projectsData.header.badge}</span>
+                    </div>
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
                         {projectsData.header.title}
-                    </h1>
+                    </h2>
                     <p className="max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
                         {projectsData.header.description}
                     </p>

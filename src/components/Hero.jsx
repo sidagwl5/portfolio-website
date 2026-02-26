@@ -1,4 +1,3 @@
-import React from "react";
 import { Download, Mail } from "lucide-react";
 import { heroData } from "../data/heroData";
 import InteractiveBackground from "./InteractiveBackground";

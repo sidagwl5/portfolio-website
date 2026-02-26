@@ -19,8 +19,8 @@ const Experience = () => {
     const circleY = useTransform(springProgress, [0, 1], ["0%", "100%"]);
 
     return (
-        <section className="pt-20 md:pt-32 pb-20 md:pb-32 px-6" id="experience" ref={containerRef}>
-            <div className="max-w-5xl mx-auto">
+        <section className="pt-20 md:pt-32 pb-20 md:pb-32" id="experience" ref={containerRef}>
+            <div className="max-w-[1080px] mx-auto px-6">
                 <header className="mb-12 md:mb-20">
                     <h2 className="text-sm font-mono text-primary mb-4 tracking-widest uppercase">{experienceData.header.badge}</h2>
                     <h1 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">

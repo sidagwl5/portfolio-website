@@ -5,12 +5,12 @@ import InteractiveBackground from './InteractiveBackground';
 
 const Hero = () => {
     return (
-        <section className="relative text-center mb-10 md:mb-20 max-w-5xl mx-auto px-6 pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+        <section className="relative mb-10 md:mb-20 overflow-hidden">
             <div className="hidden lg:block absolute inset-0 z-0">
                 <InteractiveBackground />
             </div>
 
-            <div className="relative z-10">
+            <div className="max-w-[1080px] mx-auto px-6 pt-24 md:pt-32 pb-16 md:pb-24 relative z-10 text-center">
                 <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-full px-4 py-1 mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-primary">{heroData.badge.portfolio}</span>
                     <div className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700"></div>

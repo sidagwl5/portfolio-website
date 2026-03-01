@@ -18,18 +18,18 @@ const Hero = () => {
       <div className="max-w-[1080px] mx-auto px-6 pt-24 md:pt-32 pb-16 md:pb-24 relative z-10 text-center">
         <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-full px-4 py-1 mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both">
           <span className="text-[10px] font-bold uppercase tracking-wider text-primary">
-            {heroData.badge.portfolio}
+            {heroData.badge.primary}
           </span>
           <div className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700"></div>
           <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-            {heroData.badge.featured}
+            {heroData.badge.secondary}
           </span>
         </div>
-        <h1 className="font-display text-3xl md:text-7xl font-extrabold tracking-tight mb-6 md:mb-8 leading-[1.2] md:leading-[1.1] animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200 fill-mode-both text-slate-900 dark:text-white">
+        <h1 className="font-display text-4xl md:text-7xl font-extrabold tracking-tight mb-6 md:mb-8 leading-[1.2] md:leading-[1.1] animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200 fill-mode-both text-slate-900 dark:text-white">
           {heroData.title.main} <br className="hidden md:block" />{" "}
           {heroData.title.highlight}
         </h1>
-        <p className="max-w-2xl mx-auto text-base md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed mb-8 md:mb-10 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
+        <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed mb-8 md:mb-10 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
           {heroData.description}
         </p>
 

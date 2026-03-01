@@ -6,7 +6,7 @@ const Button = ({
   ...props
 }) => {
   const baseStyles =
-    "group relative flex items-center justify-center gap-2 px-8 py-4 rounded-full transition-all active:scale-95 duration-300";
+    "group relative flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full transition-all active:scale-95 duration-300 text-sm md:text-base";
 
   const variants = {
     primary:

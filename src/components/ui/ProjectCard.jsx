@@ -1,12 +1,15 @@
 import { ExternalLink, Github } from "lucide-react";
 import { useState, useRef } from "react";
+import { useTouchDevice } from "../../hooks/useTouchDevice";
 
 const ProjectCard = ({ project }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const cardRef = useRef(null);
 
+  const isTouch = useTouchDevice();
+
   const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
+    if (isTouch || !cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
     setMousePosition({
       x: e.clientX - rect.left,
@@ -26,12 +29,14 @@ const ProjectCard = ({ project }) => {
       }}
       className="project-card-glow group relative flex flex-col h-full rounded-2xl bg-white dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800/60 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 will-change-transform"
     >
-      <div
-        className="card-spotlight hidden md:block"
-        style={{
-          background: `radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${project.color?.glow || "rgba(255, 255, 255, 0.06)"}, transparent 40%)`,
-        }}
-      ></div>
+      {!isTouch && (
+        <div
+          className="card-spotlight hidden md:block"
+          style={{
+            background: `radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${project.color?.glow || "rgba(255, 255, 255, 0.06)"}, transparent 40%)`,
+          }}
+        ></div>
+      )}
 
       <div
         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none z-0 transition-opacity duration-500 group-hover:opacity-[0.08] dark:group-hover:opacity-[0.1]"

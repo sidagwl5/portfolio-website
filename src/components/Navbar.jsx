@@ -64,7 +64,7 @@ const Navbar = () => {
             />
             */}
       <nav className="pointer-events-auto relative z-10">
-        <div className="nav-pill flex items-center gap-1 bg-white/30 dark:bg-zinc-900/30 border border-slate-200/50 dark:border-zinc-800/50 rounded-full px-2 py-1.5 shadow-sm backdrop-blur-sm">
+        <div className="nav-pill flex items-center gap-1 bg-white/30 dark:bg-zinc-900/30 border border-slate-200/50 dark:border-zinc-800/50 rounded-full px-2 py-1.5 shadow-sm backdrop-blur-none md:backdrop-blur-sm">
           <a
             className="p-2 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors flex items-center justify-center text-slate-600 dark:text-slate-300"
             href="#"

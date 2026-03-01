@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { aboutData } from "../data/aboutData";
 import SectionHeader from "./ui/SectionHeader";
 import SocialLink from "./ui/SocialLink";
+import { useTouchDevice } from "../hooks/useTouchDevice";
 
 const icons = {
   Linkedin: Linkedin,
@@ -13,6 +14,7 @@ const icons = {
 };
 
 const About = () => {
+  const isTouch = useTouchDevice();
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -36,7 +38,7 @@ const About = () => {
   const glareY = useTransform(mouseYSpring, [-0.5, 0.5], ["100%", "0%"]);
 
   const handleMouseMove = (e) => {
-    if (!ref.current) return;
+    if (isTouch || !ref.current) return;
     const rect = ref.current.getBoundingClientRect();
     const width = rect.width;
     const height = rect.height;
@@ -68,11 +70,15 @@ const About = () => {
             onMouseLeave={handleMouseLeave}
           >
             <motion.div
-              style={{
-                rotateX,
-                rotateY,
-                transformStyle: "preserve-3d",
-              }}
+              style={
+                isTouch
+                  ? {}
+                  : {
+                      rotateX,
+                      rotateY,
+                      transformStyle: "preserve-3d",
+                    }
+              }
               className="relative aspect-[3/4] rounded-2xl md:max-w-[340px] mx-auto w-full transition-transform duration-200 ease-out"
             >
               <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl bg-slate-100 dark:bg-slate-800">
@@ -85,33 +91,37 @@ const About = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 
-                {/* Glare Effect */}
-                <motion.div
-                  className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-300 mix-blend-overlay z-10"
-                  style={{
-                    background:
-                      "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.8), transparent 60%)",
-                    left: glareX,
-                    top: glareY,
-                    transform: "translate(-50%, -50%)",
-                    width: "200%",
-                    height: "200%",
-                  }}
-                />
+                {!isTouch && (
+                  <>
+                    {/* Glare Effect */}
+                    <motion.div
+                      className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-60 transition-opacity duration-300 mix-blend-overlay z-10"
+                      style={{
+                        background:
+                          "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.8), transparent 60%)",
+                        left: glareX,
+                        top: glareY,
+                        transform: "translate(-50%, -50%)",
+                        width: "200%",
+                        height: "200%",
+                      }}
+                    />
 
-                {/* Dark mode extra glare */}
-                <motion.div
-                  className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-30 transition-opacity duration-300 mix-blend-soft-light hidden dark:block z-10"
-                  style={{
-                    background:
-                      "radial-gradient(circle at 50% 50%, rgba(255,255,255,1), transparent 50%)",
-                    left: glareX,
-                    top: glareY,
-                    transform: "translate(-50%, -50%)",
-                    width: "200%",
-                    height: "200%",
-                  }}
-                />
+                    {/* Dark mode extra glare */}
+                    <motion.div
+                      className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-30 transition-opacity duration-300 mix-blend-soft-light hidden dark:block z-10"
+                      style={{
+                        background:
+                          "radial-gradient(circle at 50% 50%, rgba(255,255,255,1), transparent 50%)",
+                        left: glareX,
+                        top: glareY,
+                        transform: "translate(-50%, -50%)",
+                        width: "200%",
+                        height: "200%",
+                      }}
+                    />
+                  </>
+                )}
               </div>
             </motion.div>
           </div>

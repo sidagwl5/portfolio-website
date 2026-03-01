@@ -2,13 +2,18 @@ import { Download, Mail } from "lucide-react";
 import { heroData } from "../data/heroData";
 import InteractiveBackground from "./InteractiveBackground";
 import Button from "./ui/Button";
+import { useTouchDevice } from "../hooks/useTouchDevice";
 
 const Hero = () => {
+  const isTouch = useTouchDevice();
+
   return (
     <section className="relative mb-10 md:mb-20 overflow-hidden">
-      <div className="hidden lg:block absolute inset-0 z-0">
-        <InteractiveBackground />
-      </div>
+      {!isTouch && (
+        <div className="hidden lg:block absolute inset-0 z-0">
+          <InteractiveBackground />
+        </div>
+      )}
 
       <div className="max-w-[1080px] mx-auto px-6 pt-24 md:pt-32 pb-16 md:pb-24 relative z-10 text-center">
         <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-full px-4 py-1 mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both">

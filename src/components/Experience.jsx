@@ -21,11 +21,11 @@ const Experience = () => {
 
   return (
     <section
-      className="pt-[88px] pb-20 md:pt-[140px] md:pb-32"
+      className="relative pt-[88px] pb-20 md:pt-[140px] md:pb-32"
       id="experience"
       ref={containerRef}
     >
-      <div className="max-w-[1080px] mx-auto px-6">
+      <div className="relative max-w-[1080px] mx-auto px-6">
         <SectionHeader
           badge={experienceData.header.badge}
           title={experienceData.header.title}
@@ -63,7 +63,8 @@ const Experience = () => {
                   initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className={`${idx % 2 === 0 ? "md:text-right text-left pl-8 md:pl-0" : "md:order-2 pl-8 md:pl-0"}`}
+                  style={{ willChange: "transform, opacity" }}
+                  className={`relative ${idx % 2 === 0 ? "md:text-right text-left pl-8 md:pl-0" : "md:order-2 pl-8 md:pl-0"}`}
                 >
                   <span
                     className={`text-sm font-mono ${exp.current ? "text-primary" : "text-slate-500"} mb-2 block uppercase tracking-wider`}
@@ -94,6 +95,7 @@ const Experience = () => {
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
+                  style={{ willChange: "transform, opacity" }}
                   className={`${idx % 2 === 0 ? "" : "md:order-1"} bg-white dark:bg-white/[0.02] p-6 md:p-8 rounded-2xl border border-slate-200 dark:border-white/5 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden`}
                 >
                   <ul className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed">

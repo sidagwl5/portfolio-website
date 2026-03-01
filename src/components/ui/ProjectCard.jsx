@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
         "--accent-color": project.color?.accent || "var(--primary)",
         "--glow-color": project.color?.glow || "rgba(59, 130, 246, 0.15)",
       }}
-      className="project-card-glow group relative flex flex-col h-full rounded-2xl bg-white dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800/60 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500"
+      className="project-card-glow group relative flex flex-col h-full rounded-2xl bg-white dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800/60 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 will-change-transform"
     >
       <div
         className="card-spotlight hidden md:block"
@@ -43,6 +43,8 @@ const ProjectCard = ({ project }) => {
           alt={project.title}
           className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
           src={project.image}
+          loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
 

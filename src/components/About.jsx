@@ -80,6 +80,8 @@ const About = () => {
                   src={aboutData.image.url}
                   alt={aboutData.image.alt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="eager"
+                  fetchpriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 

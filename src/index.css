@@ -4,214 +4,268 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-primary: #20c8a9;
-    --color-primary-purple: #5e6ad2;
-    --color-primary-blue: #3b82f6;
-    --color-primary-sky: #38bdf8;
-    --color-background-light: #f8fafc;
-    --color-background-dark: #020617;
-    --color-surface-dark: #1e293b;
-    --color-card-dark: #1e293b;
-    --color-card-light: #ffffff;
+  --color-primary: #20c8a9;
+  --color-primary-purple: #5e6ad2;
+  --color-primary-blue: #3b82f6;
+  --color-primary-sky: #38bdf8;
+  --color-background-light: #f8fafc;
+  --color-background-dark: #020617;
+  --color-surface-dark: #1e293b;
+  --color-card-dark: #1e293b;
+  --color-card-light: #ffffff;
 
-    --font-sans: "Geist", "Inter", sans-serif;
-    --font-display: "Geist", "Plus Jakarta Sans", "Inter", sans-serif;
-    --font-mono: "Geist Mono", "JetBrains Mono", "monospace";
+  --font-sans: "Geist", "Inter", sans-serif;
+  --font-display: "Geist", "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", "monospace";
 
-    --radius-DEFAULT: 0.5rem;
-    --radius-xl: 0.75rem;
-    --radius-2xl: 1rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
 
-    --animate-ping-slow: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animate-ping-slow: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 @variant dark {
-    --color-primary: #5eead4;
+  --color-primary: #5eead4;
 }
 
 :root {
-    --primary: #20c8a9;
+  --primary: #20c8a9;
 }
 
 .dark {
-    --primary: #5eead4;
+  --primary: #5eead4;
 }
 
 body {
-    font-family: 'Geist', 'Inter', sans-serif;
+  font-family: "Geist", "Inter", sans-serif;
 }
 
 .material-symbols-rounded {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
-    font-size: 18px;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 20;
+  font-size: 18px;
 }
 
 .nav-pill {
-    backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .glow-effect {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 50% -20%, rgba(94, 234, 212, 0.15) 0%, rgba(3, 0, 20, 0) 70%);
-    pointer-events: none;
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% -20%,
+    rgba(94, 234, 212, 0.15) 0%,
+    rgba(3, 0, 20, 0) 70%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 .border-gradient {
-    border: 1px solid transparent;
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) padding-box,
-        linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) border-box;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.05)
+      )
+      padding-box,
+    linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0)
+      )
+      border-box;
 }
 
 .timeline-line {
-    width: 1px;
-    background: linear-gradient(to bottom, var(--primary) 0%, #334155 100%);
+  width: 1px;
+  background: linear-gradient(to bottom, var(--primary) 0%, #334155 100%);
 }
 
 .project-card-glow {
-    position: relative;
-    transition: all 0.3s ease;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  isolation: isolate;
 }
 
 .project-card-glow:hover {
-    transform: translateY(-8px);
+  transform: translateY(-12px) scale(1.01);
 }
 
 .project-card-glow::after {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.5), transparent, rgba(59, 130, 246, 0.1));
-    z-index: -1;
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    35deg,
+    var(--accent-color, var(--primary)),
+    transparent 50%,
+    var(--glow-color, rgba(59, 130, 246, 0.2))
+  );
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0.15;
+  transition: opacity 0.5s ease;
 }
 
 .project-card-glow:hover::after {
-    opacity: 1;
+  opacity: 0.6;
+}
+
+.card-spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.project-card-glow:hover .card-spotlight {
+  opacity: 1;
 }
 
 .skill-badge {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .skill-badge:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .dark .glow-hover:hover {
-    box-shadow: 0 0 20px -5px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 20px -5px rgba(56, 189, 248, 0.3);
 }
 
 .glass-effect {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Lenis Recommended Styles */
 html.lenis,
 html.lenis body {
-    height: auto;
+  height: auto;
 }
 
 .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
+  scroll-behavior: auto !important;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
+  overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .lenis.lenis-scrolling iframe {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 /* View Transition API Styles */
 ::view-transition-group(root) {
-    animation-duration: 0.7s;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 ::view-transition-new(root) {
-    animation-name: reveal-light;
-    z-index: 100;
+  animation-name: reveal-light;
+  z-index: 100;
 }
 
 ::view-transition-old(root) {
-    animation: none;
-    z-index: -1;
+  animation: none;
+  z-index: -1;
 }
 
 .dark::view-transition-new(root) {
-    animation-name: reveal-dark;
+  animation-name: reveal-dark;
 }
 
 @keyframes reveal-light {
-    from {
-        clip-path: circle(0% at center);
-    }
+  from {
+    clip-path: circle(0% at center);
+  }
 
-    to {
-        clip-path: circle(150% at center);
-    }
+  to {
+    clip-path: circle(150% at center);
+  }
 }
 
 @keyframes reveal-dark {
-    from {
-        clip-path: circle(0% at center);
-    }
+  from {
+    clip-path: circle(0% at center);
+  }
 
-    to {
-        clip-path: circle(150% at center);
-    }
+  to {
+    clip-path: circle(150% at center);
+  }
 }
 
 @layer utilities {
-    .animate-gradient {
-        background-size: 300% 300%;
-        animation: gradient 12s ease infinite;
-        background-image: linear-gradient(-45deg,
-                #1e3a8a,
-                /* Darkish Blue (Blue 900) */
-                #3b82f6,
-                /* Blue 500 */
-                #93c5fd,
-                /* Light Blue (Blue 300) */
-                #3b82f6,
-                #1e3a8a);
+  .animate-gradient {
+    background-size: 300% 300%;
+    animation: gradient 12s ease infinite;
+    background-image: linear-gradient(
+      -45deg,
+      #1e3a8a,
+      /* Darkish Blue (Blue 900) */ #3b82f6,
+      /* Blue 500 */ #93c5fd,
+      /* Light Blue (Blue 300) */ #3b82f6,
+      #1e3a8a
+    );
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
     }
 
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
+    50% {
+      background-position: 100% 50%;
     }
 
-    @keyframes move-border {
-        from {
-            offset-distance: 0%;
-        }
-
-        to {
-            offset-distance: 100%;
-        }
+    100% {
+      background-position: 0% 50%;
     }
+  }
+
+  @keyframes move-border {
+    from {
+      offset-distance: 0%;
+    }
+
+    to {
+      offset-distance: 100%;
+    }
+  }
+
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass-morphism {
+    background: rgba(15, 23, 42, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
 }

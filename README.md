@@ -74,11 +74,11 @@ To personalize this portfolio, simply edit the files in `app/data/`. TypeScript 
 
 Feel free to reach out for collaborations or just a friendly chat!
 
-- [**LinkedIn**](https://www.linkedin.com/in/its-siddharth-agrawal/)
-- [**GitHub**](https://github.com/sidagwl5)
-- [**X (Twitter)**](https://x.com/its_sidAgrl)
-- [**Instagram**](https://www.instagram.com/its.siddharthagrawal)
-- [**Email**](mailto:sasiddharth7@gmail.com)
+- <a href="https://www.linkedin.com/in/its-siddharth-agrawal/" target="_blank" rel="noopener noreferrer">**LinkedIn**</a>
+- <a href="https://github.com/sidagwl5" target="_blank" rel="noopener noreferrer">**GitHub**</a>
+- <a href="https://x.com/its_sidAgrl" target="_blank" rel="noopener noreferrer">**X (Twitter)**</a>
+- <a href="https://www.instagram.com/its.siddharthagrawal" target="_blank" rel="noopener noreferrer">**Instagram**</a>
+- <a href="mailto:sasiddharth7@gmail.com">**Email**</a>
 
 ---
 

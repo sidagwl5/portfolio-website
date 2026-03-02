@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 import { useRef } from "react";
 import { aboutData } from "../data/aboutData";
 import SectionHeader from "./ui/SectionHeader";
@@ -11,6 +11,7 @@ const icons = {
   Github: Github,
   Instagram: Instagram,
   Mail: Mail,
+  Twitter: Twitter,
 };
 
 const About = () => {

@@ -15,8 +15,10 @@ const Button = ({
       "bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 text-slate-900 dark:text-white font-medium hover:shadow-sm",
   };
 
+  const Component = props.href ? "a" : "button";
+
   return (
-    <button
+    <Component
       className={`${baseStyles} ${variants[variant]} ${className}`}
       {...props}
     >
@@ -30,7 +32,7 @@ const Button = ({
         />
       )}
       <span className="relative z-10">{children}</span>
-    </button>
+    </Component>
   );
 };
 

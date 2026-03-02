@@ -1,4 +1,11 @@
-import { Download, Mail, Github, Instagram, Linkedin } from "lucide-react";
+import {
+  Download,
+  Mail,
+  Github,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 import { footerData } from "../data/footerData";
 import { heroData } from "../data/heroData";
 import { aboutData } from "../data/aboutData";
@@ -11,6 +18,7 @@ const icons = {
   Github,
   Instagram,
   Mail,
+  Twitter,
 };
 
 const ContactFooter = () => {
@@ -30,7 +38,11 @@ const ContactFooter = () => {
             <Button variant="primary" icon={Download}>
               {heroData.cta.download}
             </Button>
-            <Button variant="secondary" icon={Mail}>
+            <Button
+              variant="secondary"
+              icon={Mail}
+              href="mailto:sasiddharth7@gmail.com"
+            >
               {heroData.cta.contact}
             </Button>
           </div>
@@ -54,15 +66,18 @@ const ContactFooter = () => {
                 Connect
               </h4>
               <div className="flex items-center gap-3">
-                {aboutData.socials.map((social, index) => (
-                  <SocialLink
-                    key={index}
-                    href={social.url}
-                    icon={icons[social.icon]}
-                    ariaLabel={social.platform}
-                    className="w-10 h-10"
-                  />
-                ))}
+                {aboutData.socials.map((social, index) => {
+                  console.log({ icon: icons[social.icon], l: social.icon });
+                  return (
+                    <SocialLink
+                      key={index}
+                      href={social.url}
+                      icon={icons[social.icon]}
+                      ariaLabel={social.platform}
+                      className="w-10 h-10"
+                    />
+                  );
+                })}
               </div>
             </div>
           </div>

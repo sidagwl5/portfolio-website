@@ -37,7 +37,11 @@ const Hero = () => {
           <Button variant="primary" icon={Download}>
             {heroData.cta.download}
           </Button>
-          <Button variant="secondary" icon={Mail}>
+          <Button
+            variant="secondary"
+            icon={Mail}
+            href="mailto:sasiddharth7@gmail.com"
+          >
             {heroData.cta.contact}
           </Button>
         </div>

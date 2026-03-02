@@ -7,8 +7,8 @@ export const footerData = {
     info: [
       {
         label: "Email",
-        value: "hello@siddharth.me",
-        link: "mailto:hello@siddharth.me",
+        value: "sasiddharth7@gmail.com",
+        link: "mailto:sasiddharth7@gmail.com",
         icon: "mail",
       },
       {
@@ -23,13 +23,23 @@ export const footerData = {
     links: [
       {
         label: "GitHub",
-        url: "#",
+        url: "https://github.com/sidagwl5",
         icon: "github",
       },
       {
         label: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/its-siddharth-agrawal/",
         icon: "linkedin",
+      },
+      {
+        label: "Instagram",
+        url: "https://www.instagram.com/its.siddharthagrawal",
+        icon: "instagram",
+      },
+      {
+        label: "X",
+        url: "https://x.com/its_sidAgrl",
+        icon: "twitter",
       },
     ],
   },

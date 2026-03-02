@@ -16,15 +16,20 @@ export const aboutData = {
   socials: [
     {
       platform: "LinkedIn",
-      url: "https://linkedin.com/in/sidagwal",
+      url: "https://www.linkedin.com/in/its-siddharth-agrawal/",
       icon: "Linkedin",
     },
-    { platform: "GitHub", url: "https://github.com/sidagwal", icon: "Github" },
+    { platform: "GitHub", url: "https://github.com/sidagwl5", icon: "Github" },
     {
       platform: "Instagram",
-      url: "https://instagram.com/sidagwal",
+      url: "https://www.instagram.com/its.siddharthagrawal",
       icon: "Instagram",
     },
-    { platform: "Gmail", url: "mailto:sidagwal@gmail.com", icon: "Mail" },
+    {
+      platform: "X",
+      url: "https://x.com/its_sidAgrl",
+      icon: "Twitter",
+    },
+    { platform: "Gmail", url: "mailto:sasiddharth7@gmail.com", icon: "Mail" },
   ],
 };

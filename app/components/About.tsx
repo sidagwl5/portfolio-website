@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Github, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
-import { aboutData } from "../data/aboutData";
+import { aboutData, type AboutData } from "../data/aboutData";
 import SectionHeader from "./ui/SectionHeader";
 import SocialLink from "./ui/SocialLink";
 import { useTouchDevice } from "../hooks/useTouchDevice";

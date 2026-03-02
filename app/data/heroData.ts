@@ -1,6 +1,4 @@
-import { HeroData } from "../types/definitions";
-
-export const heroData: HeroData = {
+export const heroData = {
   badge: {
     primary: "Next.js",
     secondary: "React.js",
@@ -20,4 +18,6 @@ export const heroData: HeroData = {
     download: "Download CV",
     contact: "Contact Me",
   },
-};
+} as const;
+
+export type HeroData = typeof heroData;

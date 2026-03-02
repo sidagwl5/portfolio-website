@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { useTouchDevice } from "../../hooks/useTouchDevice";
-import { Project } from "../../types/definitions";
+import { type Project } from "../../data/projectsData";
 
 interface ProjectCardProps {
   project: Project;

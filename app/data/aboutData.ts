@@ -1,6 +1,4 @@
-import { AboutData } from "../types/definitions";
-
-export const aboutData: AboutData = {
+export const aboutData = {
   title: {
     prefix: "INTRACT",
     main: "Senior Frontend Developer",
@@ -34,4 +32,6 @@ export const aboutData: AboutData = {
     },
     { platform: "Gmail", url: "mailto:sasiddharth7@gmail.com", icon: "Mail" },
   ],
-};
+} as const;
+
+export type AboutData = typeof aboutData;

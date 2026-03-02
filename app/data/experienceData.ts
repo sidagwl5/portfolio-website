@@ -1,6 +1,4 @@
-import { ExperienceData } from "../types/definitions";
-
-export const experienceData: ExperienceData = {
+export const experienceData = {
   header: {
     badge: "Career Path",
     title: "Professional Experience",
@@ -35,4 +33,7 @@ export const experienceData: ExperienceData = {
       current: false,
     },
   ],
-};
+} as const;
+
+export type ExperienceData = typeof experienceData;
+export type Experience = (typeof experienceData.experiences)[number];

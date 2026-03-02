@@ -1,6 +1,4 @@
-import { TestimonialsData } from "../types/definitions";
-
-export const testimonialsData: TestimonialsData = {
+export const testimonialsData = {
   header: {
     badge: "Testimonials",
     title: "Words of praise",
@@ -51,4 +49,7 @@ export const testimonialsData: TestimonialsData = {
       avatar: "https://i.pravatar.cc/150?u=natalie",
     },
   ],
-};
+} as const;
+
+export type TestimonialsData = typeof testimonialsData;
+export type Testimonial = (typeof testimonialsData.testimonials)[number];

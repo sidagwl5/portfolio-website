@@ -1,5 +1,5 @@
 import { Quote } from "lucide-react";
-import { Testimonial } from "../../types/definitions";
+import { type Testimonial } from "../../data/testimonialsData";
 
 interface TestimonialCardProps {
   testimonial: Testimonial;

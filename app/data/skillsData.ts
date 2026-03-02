@@ -1,6 +1,4 @@
-import { SkillsData } from "../types/definitions";
-
-export const skillsData: SkillsData = {
+export const skillsData = {
   header: {
     badge: "Technical Stack",
     title: {
@@ -22,4 +20,6 @@ export const skillsData: SkillsData = {
     "State & Data": ["Redux", "Tanstack-Query", "Jotai"],
     "Build Tools": ["Vite"],
   },
-};
+} as const;
+
+export type SkillsData = typeof skillsData;

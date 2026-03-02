@@ -33,4 +33,13 @@ dist-ssr/
 
 # Build outputs
 build/
+dist/
+dist-ssr/
 temp/
+/.next/
+/out/
+
+# Next.js
+.vercel
+*.tsbuildinfo
+next-env.d.ts

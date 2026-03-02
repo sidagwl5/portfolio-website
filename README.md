@@ -70,6 +70,24 @@ To personalize this portfolio, simply edit the files in `app/data/`. TypeScript 
 
 ---
 
+## 🤝 Connect with Me
+
+Feel free to reach out for collaborations or just a friendly chat!
+
+- [**LinkedIn**](https://www.linkedin.com/in/its-siddharth-agrawal/)
+- [**GitHub**](https://github.com/sidagwl5)
+- [**X (Twitter)**](https://x.com/its_sidAgrl)
+- [**Instagram**](https://www.instagram.com/its.siddharthagrawal)
+- [**Email**](mailto:sasiddharth7@gmail.com)
+
+---
+
+## ⭐ Star the Repo
+
+If you find this template helpful, please consider giving it a **star**! It helps the project grow and stay maintained.
+
+---
+
 ## 📜 License
 
 This project is licensed under the MIT License. Feel free to use it as a template for your own portfolio!

@@ -1,5 +1,3 @@
-"use client";
-
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -8,7 +6,7 @@ import Experience from "./components/Experience";
 import Testimonials from "./components/Testimonials";
 import Projects from "./components/Projects";
 import ContactFooter from "./components/ContactFooter";
-import useSmoothScroll from "./hooks/useSmoothScroll";
+import SmoothScroll from "./components/SmoothScroll";
 import React from "react";
 
 const SectionDivider: React.FC = () => (
@@ -18,11 +16,9 @@ const SectionDivider: React.FC = () => (
 );
 
 export default function Home() {
-  // Initialize smooth scroll
-  useSmoothScroll();
-
   return (
     <div className="relative min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
+      <SmoothScroll />
       <Navbar />
 
       <Hero />

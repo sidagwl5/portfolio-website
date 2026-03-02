@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { experienceData } from "../data/experienceData";
 import SectionHeader from "./ui/SectionHeader";
+import { sanitizeHtml } from "../utils/sanitize";
 
 const Experience: React.FC = () => {
   const containerRef = useRef<HTMLElement>(null);
@@ -108,7 +109,9 @@ const Experience: React.FC = () => {
                         <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 mr-3 shrink-0" />
                         <span
                           className="text-sm md:text-base"
-                          dangerouslySetInnerHTML={{ __html: point }}
+                          dangerouslySetInnerHTML={{
+                            __html: sanitizeHtml(point),
+                          }}
                         />
                       </li>
                     ))}

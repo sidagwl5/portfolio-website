@@ -7,6 +7,7 @@ import { aboutData } from "../data/aboutData";
 import SectionHeader from "./ui/SectionHeader";
 import SocialLink from "./ui/SocialLink";
 import { useTouchDevice } from "../hooks/useTouchDevice";
+import { sanitizeHtml } from "../utils/sanitize";
 
 const icons: { [key: string]: any } = {
   Linkedin: Linkedin,
@@ -147,7 +148,7 @@ const About: React.FC = () => {
                   key={index}
                   className="animate-in fade-in slide-in-from-bottom-8 duration-1000"
                   style={{ animationDelay: `${(index + 3) * 100}ms` }}
-                  dangerouslySetInnerHTML={{ __html: paragraph }}
+                  dangerouslySetInnerHTML={{ __html: sanitizeHtml(paragraph) }}
                 />
               ))}
             </div>

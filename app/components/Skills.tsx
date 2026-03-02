@@ -1,4 +1,3 @@
-import React from "react";
 import { skillsData } from "../data/skillsData";
 import SectionHeader from "./ui/SectionHeader";
 

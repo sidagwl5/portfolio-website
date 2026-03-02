@@ -1,5 +1,3 @@
-import React from "react";
-
 interface SectionHeaderProps {
   badge: string;
   title: string | React.ReactNode;

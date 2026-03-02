@@ -8,7 +8,6 @@ import Projects from "./components/Projects";
 import ContactFooter from "./components/ContactFooter";
 import SmoothScroll from "./components/SmoothScroll";
 import SectionDivider from "./components/ui/SectionDivider";
-import React from "react";
 
 export default function Home() {
   return (

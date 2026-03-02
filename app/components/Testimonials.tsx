@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { testimonialsData } from "../data/testimonialsData";
 import SectionHeader from "./ui/SectionHeader";
 import TestimonialCard from "./ui/TestimonialCard";

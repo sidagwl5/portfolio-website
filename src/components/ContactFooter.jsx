@@ -35,7 +35,12 @@ const ContactFooter = () => {
           />
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="primary" icon={Download}>
+            <Button
+              variant="primary"
+              icon={Download}
+              href="/assets/resume.pdf"
+              download={`${heroData.name.replace(/\s+/g, "_")}_Resume.pdf`}
+            >
               {heroData.cta.download}
             </Button>
             <Button
